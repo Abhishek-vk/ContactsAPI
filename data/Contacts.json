@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "name": "Leanne Graham",
+        "avatar": "https://reqres.in/img/faces/1-image.jpg",
+        "user-details": {
+            "email": "Sincere@april.biz",
+            "address": "Kulas Light Apt. 556 Gwenborough",
+            "phone": "1-770-736-8031 x56442",
+            "website": "hildegard.org"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Ervin Howell",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg",
+        "user-details": {
+            "email": "Shanna@melissa.tv",
+            "address": "Victor Plains Suite 879 Wisokyburgh",
+            "phone": "010-692-6593 x09125",
+            "website": "anastasia.net"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Clementine Bauch",
+        "avatar": "https://reqres.in/img/faces/3-image.jpg",
+        "user-details": {
+            "email": "Nathan@yesenia.net",
+            "address": "Douglas Extension Suite 847 McKenziehaven",
+            "phone": "1-463-123-4447",
+            "website": "ramiro.info"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Patricia Lebsack",
+        "avatar": "https://reqres.in/img/faces/4-image.jpg",
+        "user-details": {
+            "email": "Julianne.OConner@kory.org",
+            "address": "Hoeger Mall Apt. 692 South Elvis",
+            "phone": "493-170-9623 x156",
+            "website": "kale.biz"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Chelsey Dietrich",
+        "avatar": "https://reqres.in/img/faces/5-image.jpg",
+        "user-details": {
+            "email": "Lucio_Hettinger@annie.ca",
+            "address": "Skiles Walks Suite 351 Roscoeview",
+            "phone": "(254)954-1289",
+            "website": "demarco.info"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Mrs. Dennis Schulist",
+        "avatar": "https://reqres.in/img/faces/6-image.jpg",
+        "user-details": {
+            "email": "Karley_Dach@jasper.info",
+            "address": "Norberto Crossing Apt. 950 South Christy",
+            "phone": "1-477-935-8478 x6430",
+            "website": "ola.org"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Kurtis Weissnat",
+        "avatar": "https://reqres.in/img/faces/7-image.jpg",
+        "user-details": {
+            "email": "Telly.Hoeger@billy.biz",
+            "address": "Rex Trail Suite 280 Howemouth",
+            "phone": "210.067.6132",
+            "website": "elvis.io"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Nicholas Runolfsdottir V",
+        "avatar": "https://reqres.in/img/faces/8-image.jpg",
+        "user-details": {
+            "email": "Sherwood@rosamond.me",
+            "address": "Ellsworth Summit Suite 729 Aliyaview",
+            "phone": "586.493.6943 x140",
+            "website": "jacynthe.com"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Glenna Reichert",
+        "avatar": "https://reqres.in/img/faces/9-image.jpg",
+        "user-details": {
+            "email": "Chaim_McDermott@dana.io",
+            "address": "Dayna Park Suite 449 Bartholomebury",
+            "phone": "(775)976-6794 x41206",
+            "website": "conrad.com"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Clementina DuBuque",
+        "avatar": "https://reqres.in/img/faces/10-image.jpg",
+        "user-details": {
+            "email": "Rey.Padberg@karina.biz",
+            "address": "Kattie Turnpike Suite 198 Lebsackbury",
+            "phone": "024-648-3804",
+            "website": "ambrose.net"
+        }
+    }
+]
