@@ -11,8 +11,8 @@ const urlPath = "/api/v1/contacts";
 
 app.get(urlPath, (req, res) => Controller.getContacts(req, res));
 app.post(urlPath, (req, res) => Controller.addContact(req, res));
+app.patch(urlPath, (req, res) => Controller.editContact(req, res));
 
 app.listen(port, () => {
-    console.clear();
     console.log("Server started at port 8000");
 });

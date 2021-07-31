@@ -113,7 +113,7 @@
         "id": 11,
         "name": "testName",
         "user-details": {
-            "email": "testMail@mail",
+            "email": "testEmail",
             "phone": "0123456789"
         }
     }

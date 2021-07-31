@@ -1,7 +1,9 @@
 var fs = require("fs");
 
-var dataPth = `./data/Contacts.json`;
-var data = JSON.parse(fs.readFileSync(dataPth));
+var dataPath = `./data/Contacts.json`;
+var data = JSON.parse(fs.readFileSync(dataPath));
+
+//-----------Get Contact List--------------//
 
 exports.getContacts = (req, res) => {
     res.status(200).json({
@@ -12,27 +14,32 @@ exports.getContacts = (req, res) => {
     });
 };
 
+//-----------Add New Contact--------------//
+
 exports.addContact = (req, res) => {
     const body = req.body;
-    const newId = data[data.length - 1].id + 1;
+    const newId = data.length !== 0 ? data[data.length - 1].id + 1 : 1;
     if (!!!body["user-details"]) {
         res.status(400).json({
-            status: "user-details not found",
+            status: "Error",
             statusCode: 400,
+            error: "user-details not found",
         });
     } else if (!!!body["user-details"].phone) {
         res.status(400).json({
-            status: "invalid phone value",
+            status: "Error",
             statusCode: 400,
+            error: "invalid phone value",
         });
     }
     const newContact = { id: newId, ...body };
     data.push(newContact);
-    fs.writeFile(dataPth, JSON.stringify(data, null, 4), (err) => {
+    fs.writeFile(dataPath, JSON.stringify(data, null, 4), (err) => {
         if (err) {
             res.status(500).json({
-                status: "Server error",
+                status: "Error",
                 statusCode: 500,
+                error: "Server error",
             });
         }
         res.status(200).json({
@@ -41,4 +48,57 @@ exports.addContact = (req, res) => {
             addedData: newContact,
         });
     });
+};
+
+//-----------Edit Contact--------------//
+
+exports.editContact = (req, res) => {
+    const body = req.body;
+    let oldDetails = {},
+        index = undefined;
+    if (!!!body.id) {
+        res.status(400).json({
+            status: "Error",
+            statusCode: 400,
+            error: "Invalid id",
+        });
+        return;
+    }
+    data.forEach((e, i) => {
+        if (e.id == body.id) {
+            oldDetails = e;
+            index = i;
+        }
+    });
+    if (index === undefined) {
+        res.status(400).json({
+            status: "Error",
+            statusCode: 400,
+            error: "Invalid id",
+        });
+    } else {
+        data[index] = {
+            ...oldDetails,
+            ...body,
+            "user-details": {
+                ...oldDetails["user-details"],
+                ...body["user-details"],
+            },
+        };
+        fs.writeFile(dataPath, JSON.stringify(data, null, 4), (err) => {
+            if (err) {
+                res.status(500).json({
+                    status: "Error",
+                    statusCode: 500,
+                    error: "Server error",
+                });
+            } else {
+                res.status(200).json({
+                    status: "Success",
+                    statusCode: 200,
+                    newData: data[index],
+                });
+            }
+        });
+    }
 };
