@@ -102,3 +102,46 @@ exports.editContact = (req, res) => {
         });
     }
 };
+
+//-----------Delete Contact--------------//
+
+exports.deleteContact = (req, res) => {
+    let index = undefined;
+    if (!!!req.params.id) {
+        res.status(400).json({
+            status: "Error",
+            statusCode: 400,
+            error: "Invalid id",
+        });
+        return;
+    }
+    data.forEach((e, i) => {
+        if (e.id == req.params.id) {
+            index = i;
+        }
+    });
+    if (index === undefined) {
+        res.status(400).json({
+            status: "Error",
+            statusCode: 400,
+            error: "Invalid id",
+        });
+    } else {
+        let deletedData = data.splice(index, 1);
+        fs.writeFile(dataPath, JSON.stringify(data, null, 4), (err) => {
+            if (err) {
+                res.status(500).json({
+                    status: "Error",
+                    statusCode: 500,
+                    error: "Server error",
+                });
+            } else {
+                res.status(200).json({
+                    status: "Success",
+                    statusCode: 200,
+                    deletedData,
+                });
+            }
+        });
+    }
+};
