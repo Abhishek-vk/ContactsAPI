@@ -100,9 +100,9 @@
     },
     {
         "id": 11,
-        "name": "testName",
+        "name": "TestName",
         "user-details": {
-            "email": "testEmail",
+            "email": "testMail@mail",
             "phone": "0123456789"
         }
     }
