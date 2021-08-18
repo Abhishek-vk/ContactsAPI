@@ -1,16 +1,16 @@
 {
-  "name": "contactmanagerapi",
-  "version": "1.0.0",
-  "description": "",
-  "main": "App.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon App.js"
-  },
-  "author": "AkCodes",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1"
-  }
+    "name": "contactmanagerapi",
+    "version": "1.0.0",
+    "description": "",
+    "main": "App.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node App.js"
+    },
+    "author": "AkCodes",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1"
+    }
 }

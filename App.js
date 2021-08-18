@@ -10,6 +10,7 @@ const port = 8000;
 const urlPath = "/api/v1/contacts";
 
 app.get(urlPath, (req, res) => Controller.getContacts(req, res));
+app.get(`${urlPath}/:id`, (req, res) => Controller.getContacts(req, res));
 app.post(urlPath, (req, res) => Controller.addContact(req, res));
 app.patch(urlPath, (req, res) => Controller.editContact(req, res));
 app.delete(urlPath, (req, res) => Controller.deleteContact(req, res));

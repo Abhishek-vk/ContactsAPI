@@ -11,6 +11,17 @@
         }
     },
     {
+        "id": 2,
+        "name": "Ervin Howell",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg",
+        "user-details": {
+            "email": "Shanna@melissa.tv",
+            "address": "Victor Plains Suite 879 Wisokyburgh",
+            "phone": "010-692-6593 x09125",
+            "website": "anastasia.net"
+        }
+    },
+    {
         "id": 3,
         "name": "Clementine Bauch",
         "avatar": "https://reqres.in/img/faces/3-image.jpg",
@@ -45,7 +56,7 @@
     },
     {
         "id": 6,
-        "name": "Mrs. Dennis Schulist",
+        "name": "Mr. Dennis Schulist",
         "avatar": "https://reqres.in/img/faces/6-image.jpg",
         "user-details": {
             "email": "Karley_Dach@jasper.info",
@@ -102,8 +113,10 @@
         "id": 11,
         "name": "TestName",
         "user-details": {
-            "email": "testMail@mail",
-            "phone": "0123456789"
+            "email": "testmail@email.com",
+            "phone": "1234567890",
+            "address": "",
+            "website": ""
         }
     }
 ]
